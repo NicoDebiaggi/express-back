@@ -15,7 +15,7 @@ export const getCarMakersQuery = async (filterString?: string) => {
         ]
       },
       include: {
-        CarModel: true
+        CarModels: true
       }
     })
     prisma.$disconnect()
@@ -23,7 +23,7 @@ export const getCarMakersQuery = async (filterString?: string) => {
   } else {
     const carMakers = await prisma.carMaker.findMany({
       include: {
-        CarModel: true
+        CarModels: true
       }
     })
     prisma.$disconnect()
@@ -58,7 +58,7 @@ export const createCarMakerQuery = async (carMakerName: string, carModelList: Ca
   prisma.$disconnect()
   return {
     ...carMaker,
-    CarModel: carModels
+    CarModels: carModels
   }
 }
 
@@ -69,7 +69,7 @@ export const updateCarMakerQuery = async (id: number, carMakerName: string, carM
     },
     data: {
       name: carMakerName,
-      CarModel: {
+      CarModels: {
         deleteMany: {},
         create: carModelList
       }

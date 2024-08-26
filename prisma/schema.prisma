@@ -15,7 +15,7 @@ model CarMaker {
   name      String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  CarModel  CarModel[]
+  CarModels  CarModel[]
 }
 
 model CarModel {

@@ -1,1 +1,1 @@
-export * from './quoteCalculator.utils'
+export * from './quoteCalculator.utils';
