@@ -4,6 +4,7 @@
     "/src/controllers",
     "/src/querys",
     "/src/utils",
-    "/src/middlewares"
+    "/src/middlewares",
+    "/src/models"
   ]
 }

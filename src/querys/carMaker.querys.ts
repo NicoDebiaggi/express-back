@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client"
+import { CarModel, CarModelWithId } from "../models"
 
 const prisma = new PrismaClient()
 
@@ -29,15 +30,6 @@ export const getCarMakersQuery = async (filterString?: string) => {
     prisma.$disconnect()
     return carMakers
   }
-}
-
-type CarModel = {
-  name: string
-}
-
-type CarModelWithId = CarModel & {
-  id: number
-  makerId: number
 }
 
 export const createCarMakerQuery = async (carMakerName: string, carModelList: CarModel[]) => {
