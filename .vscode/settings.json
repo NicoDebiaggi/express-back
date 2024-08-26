@@ -3,6 +3,7 @@
     "/src/routes",
     "/src/controllers",
     "/src/querys",
-    "/src/utils"
+    "/src/utils",
+    "/src/middlewares"
   ]
 }
